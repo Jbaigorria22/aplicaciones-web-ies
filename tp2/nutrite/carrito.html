@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de compras | Nutrite</title>
+</head>
+<body>
+
+  <header>
+    <img src="assets/img/logo.png" alt="Logo de Nutrite" width="120">
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo/index.html">Catálogo</a></li>
+        <li><a href="buscador.html">Buscar</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="cuenta/login.html">Mi cuenta</a></li>
+        <li><a href="envios/index.html">Envíos</a></li>
+        <li><a href="blog/index.html">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Mi carrito</h1>
+
+    <section aria-labelledby="resumen-titulo">
+      <h2 id="resumen-titulo">Resumen de productos</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Producto</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Galletitas de avena sin TACC</td>
+            <td>
+              <label for="cantidad-1">Cantidad</label>
+              <input type="number" id="cantidad-1" name="cantidad-1" value="1" min="1">
+            </td>
+            <td>$3.500</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Total: $3.500</strong></p>
+    </section>
+
+    <section aria-labelledby="envio-titulo">
+      <h2 id="envio-titulo">Calcular costo de envío</h2>
+      <form>
+        <label for="codigo-postal">Código postal</label>
+        <input type="text" id="codigo-postal" name="codigo-postal" placeholder="Ej: 5000">
+        <button type="submit">Calcular</button>
+      </form>
+    </section>
+
+    <a href="checkout.html">Continuar al checkout</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Nutrite. Todos los derechos reservados.</p>
+    <nav aria-label="Enlaces legales">
+      <ul>
+        <li><a href="legales/terminos.html">Términos y condiciones</a></li>
+        <li><a href="legales/privacidad.html">Política de privacidad</a></li>
+        <li><a href="legales/cambios-devoluciones.html">Cambios y devoluciones</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Redes sociales">
+      <ul>
+        <li><a href="https://instagram.com/nutrite_dieteticaonline">Instagram</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Nutrite</title>
+</head>
+<body>
+
+  <header>
+    <img src="assets/img/logo.png" alt="Logo de Nutrite" width="120">
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo/index.html">Catálogo</a></li>
+        <li><a href="buscador.html">Buscar</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="cuenta/login.html">Mi cuenta</a></li>
+        <li><a href="envios/index.html">Envíos</a></li>
+        <li><a href="blog/index.html">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Checkout</h1>
+
+    <form>
+      <section aria-labelledby="datos-titulo">
+        <h2 id="datos-titulo">Paso 1: Datos personales</h2>
+        <div>
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+      </section>
+
+      <section aria-labelledby="direccion-titulo">
+        <h2 id="direccion-titulo">Paso 2: Dirección de entrega</h2>
+        <div>
+          <label for="direccion">Dirección</label>
+          <input type="text" id="direccion" name="direccion" required>
+        </div>
+        <div>
+          <label for="codigo-postal">Código postal</label>
+          <input type="text" id="codigo-postal" name="codigo-postal" required>
+        </div>
+      </section>
+
+      <section aria-labelledby="pago-titulo">
+        <h2 id="pago-titulo">Paso 3: Método de pago</h2>
+        <div>
+          <label for="medio-pago">Medio de pago</label>
+          <select id="medio-pago" name="medio-pago">
+            <option value="tarjeta-credito">Tarjeta de crédito</option>
+            <option value="tarjeta-debito">Tarjeta de débito</option>
+          </select>
+        </div>
+        <div>
+          <label for="cuotas">Cuotas</label>
+          <select id="cuotas" name="cuotas">
+            <option value="1">1 pago</option>
+            <option value="3">3 cuotas sin interés</option>
+            <option value="6">6 cuotas sin interés</option>
+            <option value="12">12 cuotas sin interés</option>
+          </select>
+        </div>
+      </section>
+
+      <section aria-labelledby="confirmacion-titulo">
+        <h2 id="confirmacion-titulo">Paso 4: Confirmación del pedido</h2>
+        <p>Revisá que tus datos sean correctos antes de confirmar la compra.</p>
+        <button type="submit">Confirmar pedido</button>
+      </section>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Nutrite. Todos los derechos reservados.</p>
+    <nav aria-label="Enlaces legales">
+      <ul>
+        <li><a href="legales/terminos.html">Términos y condiciones</a></li>
+        <li><a href="legales/privacidad.html">Política de privacidad</a></li>
+        <li><a href="legales/cambios-devoluciones.html">Cambios y devoluciones</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Redes sociales">
+      <ul>
+        <li><a href="https://instagram.com/nutrite_dieteticaonline">Instagram</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+</body>
+</html>
