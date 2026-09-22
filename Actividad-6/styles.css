@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F8FAFC;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+h1, h2 {
+  font-family: 'Inter', sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+a {
+  color: #3B82F6;
+}
+
+.header-principal {
+  background-color: #0F172A;
+  padding: 1rem;
+}
+
+.header-principal a {
+  color: #F8FAFC;
+}
+
+.footer-principal {
+  background-color: #0F172A;
+  padding: 1rem;
+  color: #F8FAFC;
+}
+
+.contenido-inicio, .contenido-contacto {
+  padding: 2rem;
+}
+
+
+input[type="submit"] {
+  background-color: #3B82F6;
+  color: #F8FAFC;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-family: 'Roboto', sans-serif;
+}
