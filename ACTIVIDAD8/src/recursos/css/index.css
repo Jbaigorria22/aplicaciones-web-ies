@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'Sora';
+    src: url(./fuentes/Sora-Regular.ttf);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+/* Orden del archivo: primero los selectores de tipo (menos específicos,
+   definen la base) y después los de clase (más específicos, ajustan
+   bloques puntuales). Así lo particular queda al final y gana la cascada. */
+
+
+/* ---------- SELECTORES DE TIPO ---------- */
+
+/* html es el elemento raíz del documento (el mismo que :root, pero con selector de tipo).
+   Acá se define la tipografía y el tamaño base: todo lo demás lo hereda,
+   y las unidades rem se calculan a partir de estos 16px. */
+html {
+    font-family: 'Sora', sans-serif; /* sans-serif como respaldo si Sora no carga */
+    font-size: 16px;
+}
+
+/* Sacamos el margen por defecto del navegador para que header y footer lleguen a los bordes.
+   Fondo blanco neutro: body envuelve TODA la página, así que acá no va el color
+   de marca; ese color queda solo en .encabezado y .pie (más abajo). */
+body {
+    margin: 0;
+    color: #2b2b2b;
+    background-color: #ffffff;
+    line-height: 1.5;
+}
+
+/* Las imágenes nunca se salen de su contenedor */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: #3f4d48;
+}
+
+/* Los campos del formulario no heredan la fuente por defecto: se la forzamos */
+input,
+textarea,
+button {
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+
+/* ---------- SELECTORES DE CLASE ---------- */
+
+/* Bloque 1 del layout: HEADER.
+   display: flex en el header cambia dos cosas: por fuera sigue ocupando
+   todo el ancho como cualquier bloque, pero por dentro el logo y el nav
+   dejan de apilarse y se acomodan en fila. */
+.encabezado {
+    display: flex;
+    justify-content: space-between; /* logo a la izquierda, menú a la derecha */
+    align-items: center;            /* centrados verticalmente */
+    padding: 1rem 2rem;
+    background-color: #dfe3d3;      /* mismo color que el footer: enmarcan la página. Tono claro de la paleta del logo para que el logo (oscuro) contraste */
+}
+
+/* Bloque 2 del layout: MAIN */
+.principal {
+    max-width: 960px;   /* limita el ancho para que el texto sea cómodo de leer */
+    margin: 0 auto;     /* centra el contenido */
+    padding: 2rem 1rem;
+    background-color: #ffffff; /* fondo distinto al de header/footer: el contenido se separa del marco */
+}
+
+/* Bloque 3 del layout: FOOTER, mismo fondo que el header */
+.pie {
+    background-color: #dfe3d3;
+    color: #3f4d48;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Clases de apoyo */
+
+.logo {
+    height: 60px;
+    width: auto;
+}
+
+/* El menú también es flex para que los ítems queden en fila */
+.menu {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: #3f4d48;
+    text-decoration: none;
+}
+
+/* Link activo: subrayado y en negrita, marca simple de "estás acá" */
+.menu .activo {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.cabana {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #f7f7f5;  /* gris muy claro: con el main blanco, la tarjeta sigue distinguiéndose */
+    border: 1px solid #e3e3de;
+    border-radius: 8px;
+}
+
+.precio {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+/* Formulario en columna: cada label arriba de su campo */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 480px;
+}
