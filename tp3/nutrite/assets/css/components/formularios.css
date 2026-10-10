@@ -1,0 +1,51 @@
+/* Bloque: form / campo — estilos de formularios reutilizables */
+.form { display: grid; gap: var(--esp-4); }
+.form__fila { display: grid; gap: var(--esp-4); }
+
+.campo { display: flex; flex-direction: column; gap: var(--esp-1); }
+.campo__label { font-size: var(--texto-sm); font-weight: 600; color: var(--color-texto); }
+.campo__input,
+.campo__select,
+.campo__textarea {
+  width: 100%;
+  padding: var(--esp-3);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-sm);
+  background: var(--color-superficie);
+  transition: border-color var(--transicion), box-shadow var(--transicion);
+}
+.campo__input:focus,
+.campo__select:focus,
+.campo__textarea:focus {
+  outline: none;
+  border-color: var(--color-primario);
+  box-shadow: 0 0 0 3px var(--color-primario-claro);
+}
+.campo__textarea { min-height: 120px; resize: vertical; }
+.campo__ayuda { font-size: var(--texto-xs); color: var(--color-texto-suave); }
+.campo--error .campo__input { border-color: var(--color-stock-sin); }
+.campo--error .campo__ayuda { color: var(--color-stock-sin); }
+
+/* Selector de cantidad (Req. 4) */
+.cantidad {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-pill);
+  overflow: hidden;
+  background: var(--color-superficie);
+}
+.cantidad__boton { width: 36px; height: 36px; font-size: var(--texto-lg); color: var(--color-primario); }
+.cantidad__boton:hover { background: var(--color-primario-claro); }
+.cantidad__input {
+  width: 40px;
+  text-align: center;
+  border: none;
+  background: transparent;
+  -moz-appearance: textfield;
+}
+.cantidad__input::-webkit-inner-spin-button { -webkit-appearance: none; }
+
+@media (min-width: 600px) {
+  .form__fila--2col { grid-template-columns: 1fr 1fr; }
+}

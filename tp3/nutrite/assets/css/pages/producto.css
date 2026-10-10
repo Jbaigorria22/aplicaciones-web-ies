@@ -1,0 +1,69 @@
+/* ===================== PÁGINA: DETALLE DE PRODUCTO ===================== */
+.producto {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--esp-5);
+}
+
+/* Galería */
+.producto__galeria { display: grid; gap: var(--esp-3); }
+.producto__imagen-principal {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radio-lg);
+  background: var(--color-acento-claro);
+}
+.producto__miniaturas { display: flex; gap: var(--esp-2); }
+.producto__miniatura {
+  width: 64px; height: 64px;
+  border-radius: var(--radio-sm);
+  border: 2px solid transparent;
+  background: var(--color-acento-claro);
+  cursor: pointer;
+  overflow: hidden;
+}
+.producto__miniatura--activa { border-color: var(--color-primario); }
+
+/* Información */
+.producto__info { display: flex; flex-direction: column; gap: var(--esp-4); }
+.producto__nombre { font-size: var(--texto-xl); }
+.producto__precio-bloque {
+  padding: var(--esp-4);
+  border-radius: var(--radio-md);
+  background: var(--color-superficie);
+  box-shadow: var(--sombra-sm);
+}
+.producto__precio { font-family: var(--fuente-titulos); font-size: var(--texto-2xl); font-weight: 700; color: var(--color-primario-oscuro); }
+.producto__precio-anterior { margin-left: var(--esp-2); text-decoration: line-through; color: var(--color-texto-suave); font-size: var(--texto-base); }
+.producto__cuotas { font-size: var(--texto-sm); color: var(--color-stock-ok); font-weight: 600; }
+.producto__medios { font-size: var(--texto-xs); margin-top: var(--esp-1); }
+
+.producto__compra { display: flex; flex-wrap: wrap; gap: var(--esp-3); align-items: center; }
+.producto__compra .btn--primario { flex: 1 1 160px; }
+
+/* Acordeón de descripción e ingredientes */
+.acordeon { border-top: 1px solid var(--color-borde); }
+.acordeon__item { border-bottom: 1px solid var(--color-borde); }
+.acordeon__titulo {
+  display: flex; justify-content: space-between;
+  padding-block: var(--esp-4);
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+.acordeon__titulo::-webkit-details-marker { display: none; }
+.acordeon__titulo::after { content: "▾"; color: var(--color-primario); transition: transform var(--transicion); }
+.acordeon__item[open] .acordeon__titulo::after { transform: rotate(180deg); }
+.acordeon__contenido { padding-bottom: var(--esp-4); font-size: var(--texto-sm); }
+
+.tabla-nutricional { font-size: var(--texto-sm); }
+.tabla-nutricional th,
+.tabla-nutricional td { padding: var(--esp-2); border-bottom: 1px solid var(--color-borde); text-align: left; }
+.tabla-nutricional td:last-child { text-align: right; }
+
+@media (min-width: 1024px) {
+  .producto { grid-template-columns: 1fr 1fr; gap: var(--esp-7); align-items: start; }
+  .producto__galeria { position: sticky; top: calc(var(--alto-header) + var(--esp-5)); }
+  .producto__nombre { font-size: var(--texto-2xl); }
+  .producto__miniatura { width: 80px; height: 80px; }
+}

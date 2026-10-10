@@ -1,0 +1,93 @@
+/* ===================== PÁGINA: INICIO ===================== */
+
+/* Bloque: hero */
+.hero {
+  background:
+    radial-gradient(circle at 85% 20%, rgba(232, 163, 61, 0.25), transparent 45%),
+    linear-gradient(135deg, var(--color-primario-claro), var(--color-fondo));
+}
+.hero__contenido {
+  display: grid;
+  gap: var(--esp-5);
+  align-items: center;
+  padding-block: var(--esp-6);
+}
+.hero__etiqueta {
+  display: inline-block;
+  padding: var(--esp-1) var(--esp-3);
+  border-radius: var(--radio-pill);
+  background: var(--color-acento-claro);
+  color: #8a5a00;
+  font-size: var(--texto-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.hero__titulo { margin-block: var(--esp-3); }
+.hero__titulo-resaltado { color: var(--color-acento); }
+.hero__texto { font-size: var(--texto-lg); max-width: 45ch; }
+.hero__acciones { display: flex; flex-wrap: wrap; gap: var(--esp-3); margin-top: var(--esp-5); }
+.hero__imagen { width: 100%; max-width: 420px; justify-self: center; }
+
+/* Bloque: beneficios (propuesta de valor) */
+.beneficios {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--esp-3);
+}
+.beneficios__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+  padding: var(--esp-4);
+  background: var(--color-superficie);
+  border-radius: var(--radio-md);
+  box-shadow: var(--sombra-sm);
+}
+.beneficios__icono {
+  width: 40px; height: 40px;
+  padding: 8px;
+  border-radius: var(--radio-sm);
+  background: var(--color-acento-claro);
+  color: var(--color-acento);
+}
+.beneficios__titulo { font-size: var(--texto-sm); }
+.beneficios__texto { font-size: var(--texto-xs); }
+
+/* Bloque: categorias (grilla de accesos) */
+.categorias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--esp-3);
+}
+
+/* Bloque: banner-instagram */
+.banner-instagram {
+  display: grid;
+  gap: var(--esp-4);
+  padding: var(--esp-6) var(--esp-5);
+  border-radius: var(--radio-lg);
+  background: linear-gradient(135deg, var(--color-primario), var(--color-primario-oscuro));
+  color: #fff;
+  text-align: center;
+  justify-items: center;
+}
+.banner-instagram__titulo { color: #fff; }
+.banner-instagram__texto { color: #cfe0ce; max-width: 50ch; }
+
+@media (min-width: 600px) {
+  .categorias { grid-template-columns: repeat(3, 1fr); gap: var(--esp-4); }
+}
+
+@media (min-width: 768px) {
+  .hero__contenido { grid-template-columns: 1.1fr 1fr; }
+}
+
+@media (min-width: 1024px) {
+  .hero__contenido { padding-block: var(--esp-8); }
+  .beneficios { grid-template-columns: repeat(4, 1fr); gap: var(--esp-5); }
+  .beneficios__titulo { font-size: var(--texto-base); }
+  .beneficios__texto { font-size: var(--texto-sm); }
+  .categorias { grid-template-columns: repeat(6, 1fr); }
+  .banner-instagram { grid-template-columns: 1fr auto; text-align: left; justify-items: start; align-items: center; padding: var(--esp-7); }
+}

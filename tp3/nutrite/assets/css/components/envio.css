@@ -1,0 +1,47 @@
+/* =========================================================
+   Bloque: calculadora-envio — costo y tiempo por CP (Req. 3)
+   ========================================================= */
+.calculadora-envio {
+  padding: var(--esp-4);
+  border: 1px dashed var(--color-primario);
+  border-radius: var(--radio-md);
+  background: var(--color-primario-claro);
+}
+.calculadora-envio__titulo {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-2);
+  font-size: var(--texto-base);
+  margin-bottom: var(--esp-3);
+}
+.calculadora-envio__icono { width: 22px; height: 22px; }
+.calculadora-envio__form { display: flex; gap: var(--esp-2); }
+.calculadora-envio__input {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  padding: var(--esp-2) var(--esp-3);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-sm);
+}
+.calculadora-envio__link { display: inline-block; margin-top: var(--esp-2); font-size: var(--texto-xs); color: var(--color-primario); text-decoration: underline; }
+
+.calculadora-envio__resultados { margin-top: var(--esp-3); display: grid; gap: var(--esp-2); }
+.opcion-envio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--esp-3);
+  padding: var(--esp-3);
+  background: var(--color-superficie);
+  border-radius: var(--radio-sm);
+  border: 2px solid transparent;
+  font-size: var(--texto-sm);
+  cursor: pointer;
+}
+.opcion-envio:has(input:checked) { border-color: var(--color-primario); }
+.opcion-envio__info { display: flex; align-items: center; gap: var(--esp-2); }
+.opcion-envio__nombre { font-weight: 600; color: var(--color-texto); }
+.opcion-envio__tiempo { display: block; font-size: var(--texto-xs); color: var(--color-texto-suave); }
+.opcion-envio__precio { font-weight: 700; color: var(--color-primario-oscuro); white-space: nowrap; }
+.opcion-envio__precio--gratis { color: var(--color-stock-ok); }

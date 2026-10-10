@@ -1,0 +1,66 @@
+/* Bloque: footer */
+.footer {
+  background: var(--color-primario-oscuro);
+  color: #dfe9de;
+  margin-top: var(--esp-7);
+  padding-top: var(--esp-6);
+}
+.footer__grilla {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--esp-5);
+}
+.footer__descripcion { color: #bcd0bb; font-size: var(--texto-sm); margin-top: var(--esp-3); max-width: 32ch; }
+.footer__titulo { color: #fff; font-size: var(--texto-base); margin-bottom: var(--esp-3); }
+.footer__lista { display: flex; flex-direction: column; gap: var(--esp-2); font-size: var(--texto-sm); }
+.footer__link { color: #dfe9de; transition: color var(--transicion); }
+.footer__link:hover { color: var(--color-acento); }
+.footer__redes { display: flex; gap: var(--esp-3); margin-top: var(--esp-4); }
+.footer__red {
+  display: grid; place-items: center;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background var(--transicion);
+}
+.footer__red:hover { background: var(--color-acento); }
+.footer__red-icono { width: 18px; height: 18px; }
+.footer__legal {
+  margin-top: var(--esp-6);
+  padding-block: var(--esp-4);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: var(--texto-xs);
+  color: #9fb69e;
+  text-align: center;
+}
+
+/* Botón flotante de WhatsApp (Req. 5) */
+.whatsapp-flotante {
+  position: fixed;
+  right: var(--esp-4);
+  bottom: var(--esp-4);
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  gap: var(--esp-2);
+  padding: var(--esp-3);
+  border-radius: var(--radio-pill);
+  background: #25d366;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: var(--sombra-md);
+  transition: transform var(--transicion);
+}
+.whatsapp-flotante:hover { transform: scale(1.05); }
+.whatsapp-flotante__icono { width: 26px; height: 26px; }
+.whatsapp-flotante__texto { display: none; }
+
+@media (min-width: 600px) {
+  .footer__grilla { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .footer__grilla { grid-template-columns: 2fr 1fr 1fr 1fr; }
+  .whatsapp-flotante { padding: var(--esp-3) var(--esp-5); }
+  .whatsapp-flotante__texto { display: inline; }
+}
+.logo--footer { justify-self: start; }

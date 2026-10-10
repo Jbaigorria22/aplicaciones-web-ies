@@ -1,0 +1,35 @@
+/* =========================================================
+   NUTRITE — Hoja de estilos principal
+   Punto de entrada: importa los parciales en orden de
+   especificidad creciente (base → layout → componentes → páginas).
+   Metodología de nombres: BEM + prefijos (l-, u-, is-)
+   ========================================================= */
+
+/* 1. Base */
+@import url("base/variables.css");
+@import url("base/reset.css");
+@import url("base/tipografia.css");
+
+/* 2. Layout */
+@import url("layout/layout.css");
+@import url("layout/header.css");
+@import url("layout/footer.css");
+
+/* 3. Componentes reutilizables */
+@import url("components/botones.css");
+@import url("components/badges.css");
+@import url("components/tarjetas.css");
+@import url("components/formularios.css");
+@import url("components/stock.css");
+@import url("components/envio.css");
+
+/* 4. Estilos específicos de página */
+@import url("pages/inicio.css");
+@import url("pages/catalogo.css");
+@import url("pages/producto.css");
+@import url("pages/carrito.css");
+@import url("pages/checkout.css");
+@import url("pages/contacto.css");
+
+/* 5. Utilidades (siempre al final para que ganen) */
+@import url("base/utilidades.css");

@@ -1,0 +1,35 @@
+/* =========================================================
+   Bloque: stock — Indicador de disponibilidad (Req. 2 / HU2)
+   Tres estados mediante modificadores de color.
+   ========================================================= */
+.stock {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--esp-2);
+  font-size: var(--texto-xs);
+  font-weight: 600;
+}
+.stock::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.stock--disponible { color: var(--color-stock-ok); }
+.stock--ultimas { color: var(--color-stock-bajo); }
+.stock--sin-stock { color: var(--color-stock-sin); }
+
+/* Variante destacada para la ficha de producto */
+.stock--grande {
+  font-size: var(--texto-sm);
+  padding: var(--esp-2) var(--esp-3);
+  border-radius: var(--radio-sm);
+  background: color-mix(in srgb, currentColor 10%, transparent);
+}
+.stock--ultimas.stock--grande::before { animation: stock-pulso 1.4s infinite; }
+
+@keyframes stock-pulso {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}

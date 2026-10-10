@@ -1,0 +1,32 @@
+/* ===================== PÁGINA: CONTACTO / FAQ ===================== */
+.contacto { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--esp-5); }
+.contacto__panel {
+  padding: var(--esp-5);
+  background: var(--color-superficie);
+  border-radius: var(--radio-md);
+  box-shadow: var(--sombra-sm);
+}
+.contacto__canales { display: grid; gap: var(--esp-3); margin-top: var(--esp-4); }
+.canal {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-3);
+  padding: var(--esp-3);
+  border-radius: var(--radio-sm);
+  background: var(--color-fondo);
+  transition: background var(--transicion);
+}
+.canal:hover { background: var(--color-primario-claro); }
+.canal__icono { width: 40px; height: 40px; padding: 8px; border-radius: 50%; background: var(--color-primario); color: #fff; }
+.canal__icono--whatsapp { background: #25d366; }
+.canal__icono--instagram { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); }
+.canal__nombre { font-weight: 600; }
+.canal__dato { font-size: var(--texto-sm); color: var(--color-texto-suave); }
+
+.faq { margin-top: var(--esp-6); }
+
+@media (min-width: 1024px) {
+  .contacto { grid-template-columns: 1.4fr 1fr; gap: var(--esp-6); align-items: start; }
+}
+.contacto__intro { max-width: 60ch; }
+.faq__titulo { margin-bottom: var(--esp-4); }

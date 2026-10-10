@@ -1,0 +1,65 @@
+/* =========================================================
+   Variables (design tokens)
+   Centralizan colores, tipografías, espaciados y breakpoints
+   de referencia para mantener coherencia visual.
+   ========================================================= */
+:root {
+  /* Paleta de marca */
+  --color-primario: #2f6b3a;        /* verde hoja */
+  --color-primario-oscuro: #1f4a28;
+  --color-primario-claro: #e3efe2;
+  --color-acento: #e8a33d;          /* miel */
+  --color-acento-claro: #fcf1dd;
+
+  /* Neutros */
+  --color-fondo: #faf7f0;           /* crema */
+  --color-superficie: #ffffff;
+  --color-texto: #2b2b2b;
+  --color-texto-suave: #666055;
+  --color-borde: #e6dfd0;
+
+  /* Estados de stock (Req. 2) */
+  --color-stock-ok: #2f8f46;
+  --color-stock-bajo: #c77a0a;
+  --color-stock-sin: #c0392b;
+
+  /* Tipografía */
+  --fuente-titulos: "Poppins", system-ui, sans-serif;
+  --fuente-texto: "Inter", system-ui, sans-serif;
+  --texto-xs: 0.75rem;
+  --texto-sm: 0.875rem;
+  --texto-base: 1rem;
+  --texto-lg: 1.125rem;
+  --texto-xl: 1.5rem;
+  --texto-2xl: 2rem;
+  --texto-3xl: 2.5rem;
+
+  /* Espaciado (escala de 4px) */
+  --esp-1: 0.25rem;
+  --esp-2: 0.5rem;
+  --esp-3: 0.75rem;
+  --esp-4: 1rem;
+  --esp-5: 1.5rem;
+  --esp-6: 2rem;
+  --esp-7: 3rem;
+  --esp-8: 4rem;
+
+  /* Bordes y sombras */
+  --radio-sm: 6px;
+  --radio-md: 12px;
+  --radio-lg: 20px;
+  --radio-pill: 999px;
+  --sombra-sm: 0 1px 3px rgba(43, 43, 43, 0.08);
+  --sombra-md: 0 6px 20px rgba(43, 43, 43, 0.10);
+
+  /* Layout */
+  --ancho-max: 1200px;
+  --alto-header: 64px;
+  --transicion: 0.2s ease;
+}
+
+/* Breakpoints usados en los media queries (mobile-first):
+   - Tablet chica:  min-width: 600px
+   - Tablet:        min-width: 768px
+   - Escritorio:    min-width: 1024px
+   - Escritorio XL: min-width: 1280px */

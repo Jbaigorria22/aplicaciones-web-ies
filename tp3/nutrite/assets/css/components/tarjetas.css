@@ -1,0 +1,66 @@
+/* =========================================================
+   Bloque: producto-card  (tarjeta de producto en grillas)
+   Bloque: categoria-card (acceso a categorías)
+   ========================================================= */
+.producto-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-superficie);
+  border-radius: var(--radio-md);
+  box-shadow: var(--sombra-sm);
+  overflow: hidden;
+  transition: box-shadow var(--transicion), transform var(--transicion);
+}
+.producto-card:hover { box-shadow: var(--sombra-md); transform: translateY(-3px); }
+
+.producto-card__imagen-link { display: block; background: var(--color-acento-claro); }
+.producto-card__imagen { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+
+.producto-card__cuerpo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+  flex: 1;
+  padding: var(--esp-3);
+}
+.producto-card__categoria { font-size: var(--texto-xs); color: var(--color-texto-suave); text-transform: uppercase; letter-spacing: 0.5px; }
+.producto-card__nombre { font-size: var(--texto-sm); font-weight: 600; color: var(--color-texto); line-height: 1.3; }
+.producto-card__nombre a:hover { color: var(--color-primario); }
+.producto-card__precio { font-family: var(--fuente-titulos); font-size: var(--texto-lg); font-weight: 700; color: var(--color-primario-oscuro); }
+.producto-card__cuotas { font-size: var(--texto-xs); color: var(--color-stock-ok); }
+.producto-card__pie { margin-top: auto; display: flex; flex-direction: column; gap: var(--esp-2); }
+
+/* Modificador: producto sin stock → atenuado */
+.producto-card--sin-stock .producto-card__imagen { filter: grayscale(0.8); opacity: 0.6; }
+
+/* Etiqueta en esquina */
+.producto-card__etiqueta { position: absolute; top: var(--esp-2); left: var(--esp-2); }
+
+/* ---------- Categoría ---------- */
+.categoria-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--esp-2);
+  padding: var(--esp-4) var(--esp-2);
+  background: var(--color-superficie);
+  border-radius: var(--radio-md);
+  box-shadow: var(--sombra-sm);
+  text-align: center;
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+.categoria-card:hover { transform: translateY(-3px); box-shadow: var(--sombra-md); }
+.categoria-card__icono {
+  width: 56px;
+  height: 56px;
+  padding: 12px;
+  border-radius: 50%;
+  background: var(--color-primario-claro);
+}
+.categoria-card__nombre { font-size: var(--texto-sm); font-weight: 600; color: var(--color-texto); }
+
+@media (min-width: 600px) {
+  .producto-card__cuerpo { padding: var(--esp-4); }
+  .producto-card__nombre { font-size: var(--texto-base); }
+}

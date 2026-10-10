@@ -1,0 +1,18 @@
+/* Bloque: badge — etiquetas de atributos (sin TACC, vegano, etc.) */
+.badge {
+  display: inline-block;
+  padding: 2px var(--esp-2);
+  border-radius: var(--radio-pill);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  background: var(--color-primario-claro);
+  color: var(--color-primario-oscuro);
+}
+.badge--sin-tacc { background: #fdecc8; color: #8a5a00; }
+.badge--vegano { background: #dff3df; color: #23652f; }
+.badge--sin-azucar { background: #e3ecfa; color: #2c4f86; }
+.badge--integral { background: #f1e6da; color: #7a4f2a; }
+.badge--oferta { background: var(--color-stock-sin); color: #fff; }
+
+.badges { display: flex; flex-wrap: wrap; gap: var(--esp-1); }
